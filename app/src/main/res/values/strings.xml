@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My plant</string>
+    <string name="year">Year</string>
+    <string name="location">Location</string>
+</resources>

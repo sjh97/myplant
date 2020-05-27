@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGray">#d7d7d7</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="pantoneraRed">#BE454F</color>
+    <color name="pantoneraPink">#DC5B62</color>
+    <color name="pantoneraBlue">#385D8D</color>
+    <color name="pantoneraSky">#ADBED3</color>
+    <color name="pantoneraBrown">#944A1F</color>
+    <color name="pantoneraWheat">#DEC5A5</color>
+    <color name="pantoneraYellow">#F8DE8D</color>
+    <color name="pantoneraRose">#D9A6A1</color>
+    <color name="pantoneraMousse">#A47864</color>
+    <color name="pantoneraBlack">#2D2C2F</color>
+    <color name="pantoneraWhite">#EDE3D2</color>
+
+    <color name="plantGreen1">#6b0</color>
+    <color name="plantGreen2">#9cdd05</color>
+    <color name="plantGreen3">#c3ea21</color>
+    <color name="plantGreen4">#9cdd05</color>
+    <color name="plantBrown1">#c86e59</color>
+    <color name="plantBrown2">#a34f3e</color>
+
+    <color name="plant1">#99ca6f</color>
+    <color name="plant2">#690589</color>
+    <color name="plant3">#af5f40</color>
+    <color name="plant4">#FFB670</color>
+    <color name="plant5">#ffbd8e</color>
+    <color name="plant6">#e18152</color>
+    <color name="plant7">#7bac51</color>
+
+    <integer-array name="plant_icon_colors">
+        <item>@android:color/white</item>
+        <item>@color/plantGreen1</item>
+        <item>@color/plantGreen2</item>
+        <item>@color/plantGreen3</item>
+        <item>@color/plantGreen4</item>
+        <item>@color/plantBrown1</item>
+        <item>@color/plantBrown2</item>
+    </integer-array>
+
+    <integer-array name="plant_icon_colors2">
+        <item>@color/plant7</item>
+        <item>@color/plant1</item>
+        <item>@color/plant1</item>
+        <item>@color/plant3</item>
+        <item>@color/plant3</item>
+        <item>@color/plant4</item>
+        <item>@color/plant4</item>
+        <item>@color/plant5</item>
+        <item>@color/plant6</item>
+        <item>@color/plant5</item>
+        <item>@color/plant1</item>
+        <item>@color/plant7</item>
+        <item>@color/plant2</item>
+    </integer-array>
+
+
+
+</resources>
