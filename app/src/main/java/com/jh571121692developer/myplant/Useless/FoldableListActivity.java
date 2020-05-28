@@ -1,4 +1,4 @@
-package com.jh571121692developer.myplant;
+package com.jh571121692developer.myplant.Useless;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.alexvasilkov.android.commons.ui.Views;
 import com.alexvasilkov.foldablelayout.FoldableListLayout;
+import com.jh571121692developer.myplant.PaintingUtils.PaintingsAdapter;
+import com.jh571121692developer.myplant.R;
 
 public class FoldableListActivity extends AppCompatActivity {
 

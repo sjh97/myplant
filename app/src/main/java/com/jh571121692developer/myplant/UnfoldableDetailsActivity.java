@@ -1,12 +1,16 @@
 package com.jh571121692developer.myplant;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -15,7 +19,12 @@ import com.alexvasilkov.android.commons.texts.SpannableBuilder;
 import com.alexvasilkov.android.commons.ui.Views;
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
+import com.jh571121692developer.myplant.PaintingUtils.Painting;
+import com.jh571121692developer.myplant.PaintingUtils.PaintingsAdapter;
+import com.jh571121692developer.myplant.Utils.ClassShared;
 import com.jh571121692developer.myplant.Utils.GlideHelper;
+
+import java.util.ArrayList;
 
 public class UnfoldableDetailsActivity extends AppCompatActivity {
 
@@ -26,10 +35,41 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unfoldable_details);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        ArrayList<Painting> paintingArrayList = new ArrayList<>();
+//        int imageId = getResources().getIdentifier("@drawable/ic_launcher_background","drawable", getPackageName());
+//        String title = "title";
+//        String year = "year";
+//        String loction = "location";
+//        Painting painting = new Painting(imageId, title, year, loction);
+//        paintingArrayList.add(painting);
+//        ClassShared classShared = new ClassShared(this);
+//        classShared.putPaintingArray(paintingArrayList, getString(R.string.detailsKey));
 
         final ListView listView = Views.find(this, R.id.list_view);
         listView.setAdapter(new PaintingsAdapter(this));
+
+//        ImageView imageView = Views.find(this, R.id.add_view_item_image);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int imageId = getResources().getIdentifier("@drawable/ic_launcher_background","drawable", getPackageName());
+//                String title = "title";
+//                String year = "year";
+//                String loction = "location";
+//                Painting painting = new Painting(imageId, title, year, loction);
+//                openDetails(view, painting);
+//            }
+//        });
+
+        FrameLayout frameLayout = Views.find(this, R.id.add_list_view);
+        frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UnfoldableDetailsActivity.this, TestActivity.class));
+                finish();
+            }
+        });
 
         listTouchInterceptor = Views.find(this, R.id.touch_interceptor_view);
         listTouchInterceptor.setClickable(false);

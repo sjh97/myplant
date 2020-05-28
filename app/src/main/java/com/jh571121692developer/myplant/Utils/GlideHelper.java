@@ -4,7 +4,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.jh571121692developer.myplant.Painting;
+import com.jh571121692developer.myplant.PaintingUtils.Painting;
 
 public class GlideHelper {
 

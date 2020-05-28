@@ -1,35 +1,22 @@
-package com.jh571121692developer.myplant;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.jh571121692developer.myplant.Useless;
 
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.alexvasilkov.android.commons.adapters.ItemsAdapter;
-import com.alexvasilkov.android.commons.texts.SpannableBuilder;
 import com.alexvasilkov.android.commons.ui.Views;
-import com.alexvasilkov.foldablelayout.UnfoldableView;
-import com.jh571121692developer.myplant.Utils.GlideHelper;
-
-import org.w3c.dom.Text;
+import com.jh571121692developer.myplant.R;
 
 import java.util.ArrayList;
 import java.util.List;

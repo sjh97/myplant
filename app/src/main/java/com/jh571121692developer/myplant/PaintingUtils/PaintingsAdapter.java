@@ -1,4 +1,4 @@
-package com.jh571121692developer.myplant;
+package com.jh571121692developer.myplant.PaintingUtils;
 
 
 import android.app.Activity;
@@ -12,16 +12,23 @@ import android.widget.Toast;
 import com.alexvasilkov.android.commons.adapters.ItemsAdapter;
 import com.alexvasilkov.android.commons.ui.ContextHelper;
 import com.alexvasilkov.android.commons.ui.Views;
+import com.jh571121692developer.myplant.R;
+import com.jh571121692developer.myplant.UnfoldableDetailsActivity;
+import com.jh571121692developer.myplant.Useless.FoldableListActivity;
+import com.jh571121692developer.myplant.Utils.ClassShared;
 import com.jh571121692developer.myplant.Utils.GlideHelper;
 
+import java.sql.Array;
 import java.util.Arrays;
+import java.util.List;
 
 public class PaintingsAdapter  extends ItemsAdapter<Painting, PaintingsAdapter.ViewHolder>
         implements View.OnClickListener{
 
 
     public PaintingsAdapter(Context context){
-        setItemsList(Arrays.asList(Painting.getAllPaintings(context.getResources())));
+//        setItemsList(Arrays.asList(Painting.getAllPaintings(context.getResources())));
+        setItemsList(Arrays.asList(Painting.getAllPaintings(context)));
     }
 
     @Override
