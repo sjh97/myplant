@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alexvasilkov:foldable-layout:1.2.1@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.alexvasilkov/foldable-layout/1.2.1/edd87e2450e8932750effcee882ef8c62318b0f8/foldable-layout-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.alexvasilkov/foldable-layout/1.2.1/d5fd9cc109ed1ed4ea9e81893bebcfca5968b39/foldable-layout-1.2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.alexvasilkov/foldable-layout/1.2.1/f8fd970a51ad189731a1efb89fdb430e24477d44/foldable-layout-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

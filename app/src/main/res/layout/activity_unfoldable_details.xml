@@ -79,17 +79,27 @@
                 android:orientation="vertical"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/details_image"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="#ffffff"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop" />
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/details_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -128,6 +138,112 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="6">
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/sunButton"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#D99938"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/sun"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/waterButton"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#385D8D"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/water"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/fertilizerButton"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#944A1F"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/fertilizer"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/button4"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#ff3c00"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/ic_person_black_24dp"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/button5"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#ff3c00"
+                app:si_enabled="true"
+                app:si_no_dash="true"
+                app:srcCompat="@drawable/ic_person_black_24dp"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/button6"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#ff3c00"
+                app:si_enabled="true"
+                app:si_no_dash="true"
+                app:srcCompat="@drawable/ic_person_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
         </LinearLayout>
 

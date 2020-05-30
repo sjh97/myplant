@@ -15,12 +15,14 @@ public class Painting {
     private final String title;
     private final String year;
     private final String location;
+    private final String imageUri;
 
-    public Painting(int imageId, String title, String year, String location) {
+    public Painting(int imageId, String title, String year, String location, String imageUri) {
         this.imageId = imageId;
         this.title = title;
         this.year = year;
         this.location = location;
+        this.imageUri = imageUri;
     }
 
     public int getImageId() {
@@ -39,6 +41,10 @@ public class Painting {
         return location;
     }
 
+    public String getImageUri() {
+        return imageUri;
+    }
+
     public static Painting[] getAllPaintings(Context context){
 
         String key = context.getString(R.string.detailsKey);
@@ -50,18 +56,21 @@ public class Painting {
         ArrayList<String> titleList = new ArrayList<>();
         ArrayList<String> yearList = new ArrayList<>();
         ArrayList<String> locationList = new ArrayList<>();
+        ArrayList<String> imageUriList = new ArrayList<>();
 
         for(Painting painting : paintingList){
             imageIdList.add(painting.getImageId());
             titleList.add(painting.getTitle());
             yearList.add(painting.getYear());
             locationList.add(painting.getLocation());
+            imageUriList.add(painting.getImageUri());
         }
 
         String[] titles = titleList.toArray(new String[0]);
         String[] years = yearList.toArray(new String[0]);
         String[] locations = locationList.toArray(new String[0]);
         Integer[] imageId = imageIdList.toArray(new Integer[0]);
+        String[] imageUris = imageUriList.toArray(new String[0]);
 //        TypedArray images = res.obtainTypedArray(R.array.paintings_images);
 
         int size = titles.length;
@@ -69,7 +78,7 @@ public class Painting {
 
         for(int i = 0; i < size; i++){
 //            final int imageId = images.getResourceId(i, -1);
-            paintings[i] = new Painting(imageId[i], titles[i], years[i], locations[i]);
+            paintings[i] = new Painting(imageId[i], titles[i], years[i], locations[i], imageUris[i]);
         }
 
 //        images.recycle();

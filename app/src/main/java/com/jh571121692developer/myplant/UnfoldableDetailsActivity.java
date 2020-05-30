@@ -1,8 +1,6 @@
 package com.jh571121692developer.myplant;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,12 +17,10 @@ import com.alexvasilkov.android.commons.texts.SpannableBuilder;
 import com.alexvasilkov.android.commons.ui.Views;
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
+import com.github.zagum.switchicon.SwitchIconView;
 import com.jh571121692developer.myplant.PaintingUtils.Painting;
 import com.jh571121692developer.myplant.PaintingUtils.PaintingsAdapter;
-import com.jh571121692developer.myplant.Utils.ClassShared;
 import com.jh571121692developer.myplant.Utils.GlideHelper;
-
-import java.util.ArrayList;
 
 public class UnfoldableDetailsActivity extends AppCompatActivity {
 
@@ -49,6 +45,30 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
         final ListView listView = Views.find(this, R.id.list_view);
         listView.setAdapter(new PaintingsAdapter(this));
 
+        final SwitchIconView sunIconView = Views.find(this, R.id.sunButton);
+        sunIconView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sunIconView.switchState();
+            }
+        });
+
+        final SwitchIconView waterIconView = Views.find(this, R.id.waterButton);
+        waterIconView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                waterIconView.switchState();
+            }
+        });
+
+        final SwitchIconView fertilizerIconView = Views.find(this, R.id.fertilizerButton);
+        fertilizerIconView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fertilizerIconView.switchState();
+            }
+        });
+
 //        ImageView imageView = Views.find(this, R.id.add_view_item_image);
 //        imageView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -66,8 +86,7 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UnfoldableDetailsActivity.this, TestActivity.class));
-                finish();
+                startActivity(new Intent(UnfoldableDetailsActivity.this, addDetailsActivity.class));
             }
         });
 
