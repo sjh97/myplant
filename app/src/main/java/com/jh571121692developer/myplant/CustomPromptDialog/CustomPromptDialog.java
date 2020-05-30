@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.os.Bundle;
@@ -49,6 +50,8 @@ public class CustomPromptDialog extends Dialog {
     private OnPositiveListener mOnPositiveListener;
     //My custom
     private ImageView addTv, delTv;
+    View contentView;
+    private Drawable mdrawable;
 
     private int mDialogType;
     private boolean mIsShowAnim;
@@ -60,6 +63,12 @@ public class CustomPromptDialog extends Dialog {
 
     public CustomPromptDialog(Context context, int theme) {
         super(context, cn.refactor.lib.colordialog.R.style.color_dialog);
+        init();
+    }
+
+    public CustomPromptDialog(Context context, Drawable drawable) {
+        this(context, 0);
+        this.mdrawable = drawable;
         init();
     }
 
@@ -84,7 +93,7 @@ public class CustomPromptDialog extends Dialog {
     }
 
     private void initView() {
-        View contentView = View.inflate(getContext(), R.layout.layout_custom_promptdialog, null);
+        contentView = View.inflate(getContext(), R.layout.layout_custom_promptdialog, null);
         setContentView(contentView);
         resizeDialog();
 
@@ -118,7 +127,12 @@ public class CustomPromptDialog extends Dialog {
 
         View llBtnGroup = findViewById(cn.refactor.lib.colordialog.R.id.llBtnGroup);
         ImageView logoIv = (ImageView) contentView.findViewById(cn.refactor.lib.colordialog.R.id.logoIv);
-        logoIv.setBackgroundResource(getLogoResId(mDialogType));
+        if(mdrawable == null){
+            logoIv.setBackgroundResource(getLogoResId(mDialogType));
+        }
+        else{
+            logoIv.setBackground(mdrawable);
+        }
 
         LinearLayout topLayout = (LinearLayout) contentView.findViewById(cn.refactor.lib.colordialog.R.id.topLayout);
         ImageView triangleIv = new ImageView(getContext());
@@ -143,7 +157,6 @@ public class CustomPromptDialog extends Dialog {
         mContentTv.setText(mContent);
         mPositiveBtn.setText(mBtnText);
     }
-
     private void resizeDialog() {
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.width = (int)(DisplayUtil.getScreenSize(getContext()).x * 0.7);

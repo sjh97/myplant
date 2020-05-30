@@ -151,9 +151,9 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
         final SwitchIconView fertilizerIconView = Views.find(this, R.id.fertilizerButton);
 
         // 각각의 아이콘마다 들어가는 내용만 다를뿐 기능상의 차이가 없기 때문에 class를 만들어서 간단하게 표현하였다.
-        iconClickSetter.setAllClickListener(sunIconView, "햇볕 쬐기");
-        iconClickSetter.setAllClickListener(waterIconView, "물주기");
-        iconClickSetter.setAllClickListener(fertilizerIconView, "영양제 주기");
+        iconClickSetter.setAllClickListener(sunIconView, "햇볕 쬐기", R.drawable.ic_sun);
+        iconClickSetter.setAllClickListener(waterIconView, "물주기", R.drawable.ic_water);
+        iconClickSetter.setAllClickListener(fertilizerIconView, "영양제 주기", R.drawable.ic_fertilizer);
 
 
         unfoldableView.unfold(coverView, detailsLayout);

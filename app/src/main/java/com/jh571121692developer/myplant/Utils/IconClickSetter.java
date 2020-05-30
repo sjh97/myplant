@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.github.zagum.switchicon.SwitchIconView;
 import com.jh571121692developer.myplant.CustomPromptDialog.CustomPromptDialog;
+import com.jh571121692developer.myplant.R;
 import com.jh571121692developer.myplant.UnfoldableDetailsActivity;
 
 import cn.refactor.lib.colordialog.PromptDialog;
@@ -18,7 +19,7 @@ public class IconClickSetter {
         this.context = context;
     }
 
-    public void setAllClickListener(final SwitchIconView switchIconView, final String word){
+    public void setAllClickListener(final SwitchIconView switchIconView, final String word, final int drawableId){
         switchIconView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +30,7 @@ public class IconClickSetter {
         switchIconView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                final CustomPromptDialog customPromptDialog = new CustomPromptDialog(context);
+                final CustomPromptDialog customPromptDialog = new CustomPromptDialog(context, context.getDrawable(drawableId));
 
                 customPromptDialog
                         .setDialogType(PromptDialog.DIALOG_TYPE_INFO)
