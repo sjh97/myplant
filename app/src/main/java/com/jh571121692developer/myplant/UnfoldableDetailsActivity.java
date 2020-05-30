@@ -1,12 +1,15 @@
 package com.jh571121692developer.myplant;
 
 import androidx.appcompat.app.AppCompatActivity;
+import cn.refactor.lib.colordialog.ColorDialog;
+import cn.refactor.lib.colordialog.PromptDialog;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -18,9 +21,11 @@ import com.alexvasilkov.android.commons.ui.Views;
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
 import com.github.zagum.switchicon.SwitchIconView;
+import com.jh571121692developer.myplant.CustomPromptDialog.CustomPromptDialog;
 import com.jh571121692developer.myplant.PaintingUtils.Painting;
 import com.jh571121692developer.myplant.PaintingUtils.PaintingsAdapter;
 import com.jh571121692developer.myplant.Utils.GlideHelper;
+import com.jh571121692developer.myplant.Utils.IconClickSetter;
 
 public class UnfoldableDetailsActivity extends AppCompatActivity {
 
@@ -44,30 +49,6 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
 
         final ListView listView = Views.find(this, R.id.list_view);
         listView.setAdapter(new PaintingsAdapter(this));
-
-        final SwitchIconView sunIconView = Views.find(this, R.id.sunButton);
-        sunIconView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sunIconView.switchState();
-            }
-        });
-
-        final SwitchIconView waterIconView = Views.find(this, R.id.waterButton);
-        waterIconView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                waterIconView.switchState();
-            }
-        });
-
-        final SwitchIconView fertilizerIconView = Views.find(this, R.id.fertilizerButton);
-        fertilizerIconView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fertilizerIconView.switchState();
-            }
-        });
 
 //        ImageView imageView = Views.find(this, R.id.add_view_item_image);
 //        imageView.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +79,7 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
 
         unfoldableView = Views.find(this, R.id.unfoldable_view);
 
-        Bitmap glance = BitmapFactory.decodeResource(getResources(), R.drawable.random_pick);
+        Bitmap glance = BitmapFactory.decodeResource(getResources(), R.drawable.unfold_glance);
         unfoldableView.setFoldShading(new GlanceFoldShading(glance));
 
         unfoldableView.setOnFoldingListener(new UnfoldableView.SimpleFoldingListener(){
@@ -161,7 +142,23 @@ public class UnfoldableDetailsActivity extends AppCompatActivity {
                 .append(painting.getLocation());
         description.setText(builder.build());
 
+        IconClickSetter iconClickSetter = new IconClickSetter(UnfoldableDetailsActivity.this);
+
+        final SwitchIconView sunIconView = Views.find(this, R.id.sunButton);
+
+        final SwitchIconView waterIconView = Views.find(this, R.id.waterButton);
+
+        final SwitchIconView fertilizerIconView = Views.find(this, R.id.fertilizerButton);
+
+        // 각각의 아이콘마다 들어가는 내용만 다를뿐 기능상의 차이가 없기 때문에 class를 만들어서 간단하게 표현하였다.
+        iconClickSetter.setAllClickListener(sunIconView, "햇볕 쬐기");
+        iconClickSetter.setAllClickListener(waterIconView, "물주기");
+        iconClickSetter.setAllClickListener(fertilizerIconView, "영양제 주기");
+
+
         unfoldableView.unfold(coverView, detailsLayout);
     }
+
+
 
 }

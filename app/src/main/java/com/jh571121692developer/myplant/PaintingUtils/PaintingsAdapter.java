@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.alexvasilkov.android.commons.adapters.ItemsAdapter;
 import com.alexvasilkov.android.commons.ui.ContextHelper;
 import com.alexvasilkov.android.commons.ui.Views;
+import com.github.zagum.switchicon.SwitchIconView;
 import com.jh571121692developer.myplant.R;
 import com.jh571121692developer.myplant.UnfoldableDetailsActivity;
 import com.jh571121692developer.myplant.Useless.FoldableListActivity;

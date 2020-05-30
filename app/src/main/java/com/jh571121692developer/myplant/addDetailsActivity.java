@@ -111,6 +111,7 @@ public class addDetailsActivity extends AppCompatActivity implements DatePickerD
         addImageTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //https://github.com/ArthurHub/Android-Image-Cropper
                 CropImage.activity()
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .setAspectRatio(1,1)
