@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiaryCardList.AddDiaryActivity">
+
+    <RelativeLayout
+        android:id="@+id/addDiaryImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@color/pantoneraRose">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_outline_black_24dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/addDiaryPreviewImage"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:layout_margin="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addDiaryImage">
+
+        <EditText
+            android:id="@+id/addDiaryText"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="여기에 일기를 적으세요!"/>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addDiarySaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"/>
+</RelativeLayout>

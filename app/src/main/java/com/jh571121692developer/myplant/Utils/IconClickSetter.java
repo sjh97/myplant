@@ -6,24 +6,62 @@ import android.view.View;
 
 import com.github.zagum.switchicon.SwitchIconView;
 import com.jh571121692developer.myplant.CustomPromptDialog.CustomPromptDialog;
+import com.jh571121692developer.myplant.DiscreteScrollView_Utils.DetailData;
 import com.jh571121692developer.myplant.R;
-import com.jh571121692developer.myplant.UnfoldableDetailsActivity;
+
+import java.util.ArrayList;
 
 import cn.refactor.lib.colordialog.PromptDialog;
 
 public class IconClickSetter {
 
     Context context;
+    DetailData detailData;
+    int postion;
+    String detailsKey;
+    ArrayList<DetailData> detailDataList;
 
-    public IconClickSetter(Context context) {
+    public IconClickSetter(Context context, DetailData detailData, int postion) {
         this.context = context;
+        this.detailData = detailData;
+        detailsKey = context.getString(R.string.detailsKey);
+        detailDataList = new ClassShared(context).getDetailArray(detailsKey);
+        this.postion = postion;
     }
 
     public void setAllClickListener(final SwitchIconView switchIconView, final String word, final int drawableId){
         switchIconView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switchIconView.switchState();
+                Log.d("sibal","get" + switchIconView.getId());
+                Log.d("sibal","water" + R.id.waterButton1);
+
+                switch (switchIconView.getId()){
+                    case R.id.waterButton1 :
+                        switchIconView.switchState();
+                        detailData.setWaterIcon(!detailData.getWaterIcon());
+                        break;
+
+                    case R.id.sunButton1 :
+                        switchIconView.switchState();
+                        detailData.setSunIcon(!detailData.getSunIcon());
+                        break;
+
+                    case R.id.fertilizerButton1 :
+                        switchIconView.switchState();
+                        detailData.setFertilIcon(!detailData.getFertilIcon());
+                        break;
+
+                    default:
+                        switchIconView.switchState();
+                        break;
+                }
+
+                ArrayList<DetailData> detailDataList = new ClassShared(context).getDetailArray(detailsKey);
+
+
+                detailDataList.set(postion,detailData);
+                new ClassShared(context).putDetailArray(detailDataList,detailsKey);
             }
         });
 

@@ -10,47 +10,94 @@
 9        android:targetSdkVersion="28" />
 9-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:5:5-22:19
-12        android:allowBackup="true"
-12-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.1.0] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:10:9-35
-19        android:testOnly="true"
-20        android:theme="@style/AppTheme" >
-20-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity android:name="com.jh571121692developer.myplant.FoldableListActivity" />
-21-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:12:9-67
-21-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:12:19-55
-22        <activity android:name="com.jh571121692developer.myplant.UnfoldableDetailsActivity" />
-22-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:13:9-63
-22-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:13:19-60
-23        <activity android:name="com.jh571121692developer.myplant.MainActivity" />
-23-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:14:9-50
-23-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:14:19-47
-24        <activity android:name="com.jh571121692developer.myplant.SplashActivity" >
-24-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:15:9-21:20
-24-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:15:19-49
-25            <intent-filter>
-25-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:16:13-20:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:17:17-69
-26-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:17:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:19:17-77
-28-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:19:27-74
-29            </intent-filter>
-30        </activity>
-31    </application>
-32
-33</manifest>
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:7:5-80
+12-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:7:22-77
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:8:5-68
+13-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:8:22-65
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:9:22-78
+15
+16    <application
+16-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:11:5-40:19
+17        android:allowBackup="true"
+17-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:12:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.2.0] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\2c4911487622891b7d804fc82995f4ba\core-1.2.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:13:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:14:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:15:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:16:9-35
+24        android:testOnly="true"
+25        android:theme="@style/NoActionBarTheme" >
+25-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:17:9-48
+26        <activity android:name="com.jh571121692developer.myplant.DetailsActivity" />
+26-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:18:9-62
+26-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:18:19-50
+27        <activity android:name="com.jh571121692developer.myplant.MainViewActivity" />
+27-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:19:9-54
+27-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:19:19-51
+28        <activity
+28-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:20:9-22:59
+29            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+29-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:21:13-76
+30            android:theme="@style/Base.Theme.AppCompat" />
+30-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:22:13-56
+31        <activity android:name="com.jh571121692developer.myplant.addDetailsActivity" />
+31-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:23:9-56
+31-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:23:19-53
+32        <activity android:name="com.jh571121692developer.myplant.SplashActivity" >
+32-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:24:9-30:20
+32-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:24:19-49
+33            <intent-filter>
+33-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:25:13-29:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:26:17-69
+34-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:26:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:28:17-77
+36-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:28:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <receiver
+40-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:32:9-38:20
+41            android:name="com.jh571121692developer.myplant.AlarmManager.DeviceBootReceiver"
+41-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:33:13-60
+42            android:enabled="false" >
+42-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:34:13-36
+43            <intent-filter>
+43-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:35:13-37:29
+44                <action android:name="android.intent.action.BOOT_COMPLETED" />
+44-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:36:17-79
+44-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:36:25-76
+45            </intent-filter>
+46        </receiver>
+47        <receiver android:name="com.jh571121692developer.myplant.AlarmManager.AlarmReceiver" />
+47-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:39:9-64
+47-->C:\Users\xnote\Myplant\app\src\main\AndroidManifest.xml:39:19-61
+48
+49        <activity
+49-->[gun0912.ted:tedpermission:2.2.3] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\3eeda2247ee424f59eaf0826890e8a39\jetified-tedpermission-2.2.3\AndroidManifest.xml:10:9-14:67
+50            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+50-->[gun0912.ted:tedpermission:2.2.3] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\3eeda2247ee424f59eaf0826890e8a39\jetified-tedpermission-2.2.3\AndroidManifest.xml:11:13-75
+51            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
+51-->[gun0912.ted:tedpermission:2.2.3] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\3eeda2247ee424f59eaf0826890e8a39\jetified-tedpermission-2.2.3\AndroidManifest.xml:12:13-144
+52            android:screenOrientation="unspecified"
+52-->[gun0912.ted:tedpermission:2.2.3] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\3eeda2247ee424f59eaf0826890e8a39\jetified-tedpermission-2.2.3\AndroidManifest.xml:13:13-52
+53            android:theme="@style/Theme.Transparent.Permission" />
+53-->[gun0912.ted:tedpermission:2.2.3] C:\Users\xnote\.gradle\caches\transforms-2\files-2.1\3eeda2247ee424f59eaf0826890e8a39\jetified-tedpermission-2.2.3\AndroidManifest.xml:14:13-64
+54    </application>
+55
+56</manifest>

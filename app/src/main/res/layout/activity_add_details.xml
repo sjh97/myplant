@@ -137,8 +137,14 @@
             android:layout_marginEnd="10dp"
             android:layout_alignParentEnd="true"/>
 
-
     </RelativeLayout>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"/>
 
     <Button
         android:id="@+id/saveButton"

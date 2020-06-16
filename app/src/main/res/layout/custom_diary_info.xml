@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/diaryDate"
+        android:contentDescription="일기 쓰는 날짜"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:hint="일기 날짜"/>
+
+<!--    <ScrollView-->
+<!--        android:layout_below="@+id/diaryDate"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/diaryDetailTextViewWraper"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:hint="내용"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/diaryDetailTextView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    </ScrollView>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/diaryDate"
+        android:id="@+id/diaryDetailTextViewWraper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:hint="내용"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/diaryDetailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

@@ -55,7 +55,7 @@
     <View
         android:id="@+id/touch_interceptor_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:id="@+id/details_layout"
@@ -200,7 +200,7 @@
                 app:si_disabled_color="#b7b7b7"
                 app:si_tint_color="#ff3c00"
                 app:si_enabled="false"
-                app:si_no_dash="false"
+                app:si_no_dash="true"
                 app:srcCompat="@drawable/ic_person_black_24dp"/>
 
             <com.github.zagum.switchicon.SwitchIconView
@@ -213,7 +213,7 @@
                 app:si_animation_duration="500"
                 app:si_disabled_color="#b7b7b7"
                 app:si_tint_color="#ff3c00"
-                app:si_enabled="true"
+                app:si_enabled="false"
                 app:si_no_dash="true"
                 app:srcCompat="@drawable/ic_person_black_24dp"/>
 
@@ -229,19 +229,25 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4">
+            android:layout_weight="5">
+            <ListView
+                android:id="@+id/diarys"
+                android:divider="#000000"
+                android:dividerHeight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1">-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
     </LinearLayout>
 

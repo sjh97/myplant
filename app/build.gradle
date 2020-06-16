@@ -38,4 +38,7 @@ dependencies {
     implementation 'gun0912.ted:tedpermission:2.2.3'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation 'com.github.andyxialm:ColorDialog:1.0.0'
+    implementation 'com.ramotion.expandingcollection:expanding-collection:0.9.2'
+    implementation 'com.yalantis:flipviewpager:1.0.0'
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
 }

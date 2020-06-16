@@ -97,6 +97,7 @@
             android:paddingTop="5dp"
             android:textColor="@color/color_dialog_content_prompt"
             android:visibility="visible" />
+
     </LinearLayout>
 
 

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_weight="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/details_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/details_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4sp"
+                    android:textColor="#eee"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="12">
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/sunButton1"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#D99938"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/ic_sun"/>
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/waterButton1"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#385D8D"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/ic_water"/>
+
+
+            <com.github.zagum.switchicon.SwitchIconView
+                android:id="@+id/fertilizerButton1"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                app:si_animation_duration="500"
+                app:si_disabled_color="#b7b7b7"
+                app:si_tint_color="#944A1F"
+                app:si_enabled="false"
+                app:si_no_dash="false"
+                app:srcCompat="@drawable/fertilizer"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/importDiaryDialogView"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_add_black_24dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+            <ListView
+                android:id="@+id/diarys"
+                android:divider="#000000"
+                android:dividerHeight="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

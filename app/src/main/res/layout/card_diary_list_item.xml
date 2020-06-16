@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/card_list_item_scrollview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/card_list_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/card_list_item_scrollview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/card_list_item_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"/>
+
+    </ScrollView>
+
+
+</FrameLayout>

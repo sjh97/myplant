@@ -116,6 +116,8 @@
     <orderEntry type="library" name="Gradle: com.github.drawers:SpinnerDatePicker:2.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: gun0912.ted:tedpermission:2.2.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.theartofdev.edmodo:android-image-cropper:2.8.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.ramotion.expandingcollection:expanding-collection:0.9.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.yalantis:flipviewpager:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.1.0@aar" level="project" />
@@ -150,5 +152,6 @@
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.zagum:Android-SwitchIcon:1.4.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.andyxialm:ColorDialog:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.yarolegovich:discrete-scrollview:1.4.9@aar" level="project" />
   </component>
 </module>

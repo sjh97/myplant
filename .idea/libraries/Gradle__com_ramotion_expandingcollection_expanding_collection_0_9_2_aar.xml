@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ramotion.expandingcollection:expanding-collection:0.9.2@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/eb077720a7867e06bb4f7c725ff90f0c/expanding-collection-0.9.2/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/eb077720a7867e06bb4f7c725ff90f0c/expanding-collection-0.9.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
